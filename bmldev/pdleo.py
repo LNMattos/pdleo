@@ -33,36 +33,6 @@ if platform.system() == 'Linux':
 # In[7]:
 
 
-dic_centros = {'104':'CD',
-               '601':'Torquato',
-               '602':'Camapuã',
-               '603':'Am.Shop',
-               '604':'G.Circular',
-               '605':'Matriz',
-               '606':'Shop.PNegra',
-               '607':'Nova Cidade',
-               '608':'Millenium',
-               '609':'P.Velho',
-               '610':'Boa Vista',
-               '611':'Itacoatiara',
-               '612':'Manauara',
-               '613':'Ariquemes',
-               '614':'Pres.Figueiredo',
-               '615':'Djalma',
-               '616':'Ji-Paraná',
-               '617':'Ponta Negra',
-               '618':'Studio 5',
-               '619':'Jatuarana',
-               '620':'Avenida'
-                }
-
-
-# In[8]:
-
-
-dic_mes = {1: 'JAN', 2: 'FEV', 3: 'MAR', 4: 'ABR', 5:'MAIO', 6:'JUN', 7:'JUL', 8:'AGO', 9:'SET', 10:'OUT', 11:'NOV',12:'DEZ'}
-
-
 # - ## Funções
 
 # - #### Funções utilitárias
