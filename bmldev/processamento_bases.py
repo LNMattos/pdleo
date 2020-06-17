@@ -9,17 +9,6 @@
 import pandas as pd
 import numpy as np
 from datetime import datetime, timedelta
-from bmldev.pdleo import converte_tipos_colunas, verifica_nulos, verifica_brancos, verifica_duplicadas, remove_acentos, normaliza, normaliza_colunas, encerra
-from bmldev.pdleo import le_base_excel, le_base_txt
-from os.path import join
-
-
-# In[1]:
-
-
-import pandas as pd
-import numpy as np
-from datetime import datetime, timedelta
 from bmldev.pdleo import converte_tipos_colunas, encerra
 from os.path import join
 
