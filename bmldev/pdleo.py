@@ -234,7 +234,7 @@ def converte_coluna(df, coluna, tipo, sobrescreve=False):
 
 def converte_tipos_colunas(df, dic_cols_tipos):
     df = df.copy()
-    ls_itens = [tupla for tupla in dic_cols_tipos.items()]
+    ls_itens = [tupla for tupla in list(dic_cols_tipos.items())]
     
     for tupla in lst_itens:
         col,tipo = tupla
