@@ -210,7 +210,9 @@ def verifica_duplicadas(df, print_cols=True, return_bool=True):
 
 # In[12]:
 
-def converte_tipos_colunas(df, dic_cols_tipos):
+def converte_tipos_colunas(df, dic_cols_tipos, sobrescreve=False):
+    if not sobrescreve:
+        df = df.copy()
     lst_chaves = [tupla for tupla in dic_cols_tipos.items()]
     for tupla in lst_chaves:
         col,tipo = tupla
@@ -218,14 +220,15 @@ def converte_tipos_colunas(df, dic_cols_tipos):
             raise Exception('Coluna {} não encontrada'.format(col))
         try:
             if tipo == 'data':
-                df[coluna] = pd.to_datetime(df[coluna], dayfirst=True)
+                df[col] = pd.to_datetime(df[col], dayfirst=True)
             else:
-                df[coluna] = df[coluna].astype(tipo)
-        except:
-            warning("Não foi possível converter a coluna '{}', para {} ".format(col, tipo))
+                df[col] = df[col].astype(tipo)
+        except Exception as e:
+            warning("Não foi possível converter a coluna '{}', para {}\n{}".format(col, tipo, e))
             df[col] = df[col]
-            
-    return df
+        
+    if not sobrescreve:    
+        return df
 
 # In[14]:
 
